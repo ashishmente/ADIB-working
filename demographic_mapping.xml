@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sample mapping equivalent to a ping request. -->
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://www.sas.com/sfm/eop"
+    xsi:schemaLocation="http://www.sas.com/sfm/eop mapping.xsd">
+    
+    <messages name="SEPA">
+        <message messageType="csvMap1" subType="1.0" mapperId="csvMapnew">
+			<fields>
+			
+				<field name="smh_tran_type" default="TRX"/>
+
+				<field name="smh_cust_type" default="I"/>
+					
+				<field name="smh_acct_type" default="CS"/>
+				
+				<field name="smh_authenticate_mtd" default="NC"/>
+				
+				<field name="smh_channel_type" default="O"/>
+
+				<field name="smh_activity_type" default="NM"/>
+				
+				<field name="smh_activity_detail1" default="DMX"/>
+				
+				<field name="smh_activity_detail2" default="DEE"/>
+				
+				<field name="smh_activity_detail3" default="DUA"/>
+				
+				<field name="smh_msg_type" default="1"/>
+
+				<field name="smh_resp_req" default="1"/>
+				
+				<field name="smh_priority" default="5"/>
+				
+				<field name="smh_sdd_ind" default="1"/>
+				
+				<field name="smh_multi_org_name" default="MOBILE"/>
+				
+				<field name="smh_dest" default="SFME"/>
+
+				<field name="xqo_cust_birth_dt">
+					<srcField name="BIRTH_DT"/>
+				</field>
+
+				<field name="xqo_cust_city">
+					<srcField name="CITIZENSHIP"/>
+				</field>
+
+				<field name="rua_numeric_001">
+					<srcField name="CLASS_CODE"/>
+				</field>
+
+				<field name="rua_30byte_string_001">
+					<srcField name="CLASS_CODE_DESCRIPTION"/>
+				</field>
+
+				<field name="rqo_tran_date_client">
+					<srcField name="CLOSED_DT"/>
+				</field>
+
+				<field name="xqo_cust_cntry_code">
+					<srcField name="COUNTRY_CODE"/>
+				</field>
+
+				<field name="rua_8byte_string_001">
+					<srcField name="COUNTRY_OF_BIRTH"/>
+				</field>
+
+				<field name="rqo_tran_date">
+					<srcField name="CREATE_DT"/>
+				</field>
+
+				<field name="rqo_tran_time">
+					<srcField name="CREATE_TM"/>
+				</field>
+
+				<field name="rqo_tran_date_alt">
+					<srcField name="EFFECTIVE_DT"/>
+				</field>
+
+				<field name="rqo_tran_time_alt">
+					<srcField name="EFFECTIVE_TM"/>
+				</field>
+
+				<field name="rua_30byte_string_002">
+					<srcField name="EMPL"/>
+				</field>
+
+				<field name="rua_numeric_002">
+					<srcField name="EMPL_OCCUPATION"/>
+				</field>
+
+				<field name="xqo_phone">
+					<srcField name="EMPL_PHONE"/>
+				</field>
+
+				<field name="rua_numeric_003">
+					<srcField name="EMPL_POSITION"/>
+				</field>
+
+				<field name="xqo_cust_name">
+					<srcField name="FIRST_NAME"/>
+				</field>
+
+				<field name="dmx_date_01">
+					<srcField name="ID_EXPIRY_DT_1"/>
+				</field>
+
+				<field name="dmx_date_02">
+					<srcField name="ID_EXPIRY_DT_2"/>
+				</field>
+
+				<field name="rua_8byte_string_002">
+					<srcField name="ID_ISSUE_COUNTRY_1"/>
+				</field>
+
+				<field name="dpd_date_01">
+					<srcField name="ID_ISSUE_DT_1"/>
+				</field>
+
+				<field name="dpd_date_02">
+					<srcField name="ID_ISSUE_DT_2"/>
+				</field>
+
+				<field name="dua_40byte_string_003">
+					<srcField name="ID_VALUE_1"/>
+				</field>
+
+				<field name="dua_40byte_string_004">
+					<srcField name="ID_VALUE_2"/>
+				</field>
+
+				<field name="rua_20byte_string_003">
+					<srcField name="LAST_MAINT_DT"/>
+				</field>
+
+				<field name="dua_40byte_string_005">
+					<srcField name="LAST_NAME"/>
+				</field>
+
+				<field name="rua_20byte_string_004">
+					<srcField name="LAST_SYS_MAINT_DT"/>
+				</field>
+
+				<field name="aqd_avail_bal">
+					<srcField name="MONTH_INCOME"/>
+				</field>
+
+				<field name="dua_40byte_string_001">
+					<srcField name="MOTHER_MAIDEN_NAME"/>
+				</field>
+
+				<field name="dua_40byte_string_002">
+					<srcField name="NAME_1"/>
+				</field>
+
+				<field name="dee_entity_id_2">
+					<srcField name="POSITION_DESCRIPTION"/>
+				</field>
+
+				<field name="dee_entity_id_3">
+					<srcField name="PREV_EMPL"/>
+				</field>
+
+				<field name="rua_20byte_string_001">
+					<srcField name="PREV_EMPL_PHONE"/>
+				</field>
+
+				<field name="rua_10byte_string_001">
+					<srcField name="RESIDENCE"/>
+				</field>
+
+				<field name="rua_10byte_string_002">
+					<srcField name="RIM_TYPE"/>
+				</field>
+
+				<field name="rua_numeric_003">
+					<srcField name="RISK_CODE"/>
+				</field>
+
+				<field name="rua_numeric_004">
+					<srcField name="RSM_ID"/>
+				</field>
+
+				<field name="rua_20byte_string_002">
+					<srcField name="STATUS"/>
+				</field>
+	        </fields>
+        </message>
+    </messages>
+</application>
