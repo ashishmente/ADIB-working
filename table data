@@ -1,0 +1,83 @@
+CREATE TABLE delta_customer_demographic (
+    RIM_NO VARCHAR(20) PRIMARY KEY,
+    BIRTH_DT DATE,
+    CITIZENSHIP VARCHAR(50),
+    CLASS_CODE VARCHAR(20),
+    CLASS_CODE_DESCRIPTION VARCHAR(255),
+    CLOSED_DT DATE,
+    COUNTRY_CODE VARCHAR(10),
+    COUNTRY_OF_BIRTH VARCHAR(50),
+    CREATE_DT DATE,
+    CREATE_TM TIME,
+    EFFECTIVE_DT DATE,
+    EFFECTIVE_TM TIME,
+    EMPL VARCHAR(100),
+    EMPL_OCCUPATION VARCHAR(100),
+    EMPL_PHONE VARCHAR(20),
+    EMPL_POSITION VARCHAR(100),
+    FIRST_NAME VARCHAR(100),
+    ID_EXPIRY_DT_1 DATE,
+    ID_EXPIRY_DT_2 DATE,
+    ID_ISSUE_COUNTRY_1 VARCHAR(50),
+    ID_ISSUE_DT_1 DATE,
+    ID_ISSUE_DT_2 DATE,
+    ID_VALUE_1 VARCHAR(50),
+    ID_VALUE_2 VARCHAR(50),
+    LAST_MAINT_DT TIMESTAMP,
+    LAST_NAME VARCHAR(100),
+    LAST_SYS_MAINT_DT TIMESTAMP,
+    MONTH_INCOME DECIMAL(15,2),
+    MOTHER_MAIDEN_NAME VARCHAR(100),
+    NAME_1 VARCHAR(100),
+    POSITION_DESCRIPTION VARCHAR(255),
+    PREV_EMPL VARCHAR(100),
+    PREV_EMPL_PHONE VARCHAR(20),
+    RESIDENCE VARCHAR(255),
+    RIM_TYPE VARCHAR(10),
+    RISK_CODE VARCHAR(50),
+    RSM_ID VARCHAR(50),
+    STATUS VARCHAR(20),
+    processed VARCHAR(3) DEFAULT 'NO'
+);
+INSERT INTO delta_customer_demographic
+(RIM_NO, BIRTH_DT, CITIZENSHIP, CLASS_CODE, CLASS_CODE_DESCRIPTION, CLOSED_DT, COUNTRY_CODE, COUNTRY_OF_BIRTH, CREATE_DT, CREATE_TM, EFFECTIVE_DT, EFFECTIVE_TM, EMPL, EMPL_OCCUPATION, EMPL_PHONE, EMPL_POSITION, FIRST_NAME, ID_EXPIRY_DT_1, ID_EXPIRY_DT_2, ID_ISSUE_COUNTRY_1, ID_ISSUE_DT_1, ID_ISSUE_DT_2, ID_VALUE_1, ID_VALUE_2, LAST_MAINT_DT, LAST_NAME, LAST_SYS_MAINT_DT, MONTH_INCOME, MOTHER_MAIDEN_NAME, NAME_1, POSITION_DESCRIPTION, PREV_EMPL, PREV_EMPL_PHONE, RESIDENCE, RIM_TYPE, RISK_CODE, RSM_ID, STATUS, processed)
+VALUES 
+('RIM10001', '1985-03-12', 'USA', 'A1', 'Premium Customer', NULL, 'US', 'USA', '2020-01-15', '09:30:00', '2020-01-15', '09:30:00', 'Microsoft Corp', 'Software Developer', '555-123-4567', 'Senior Developer', 'John', '2028-05-20', '2030-08-15', 'USA', '2018-05-20', '2020-08-15', 'DL789456123', 'PP456789123', '2023-11-10 14:30:25', 'Smith', '2023-11-10 14:30:25', 9500.00, 'Johnson', 'John Smith', 'Lead Development Team', 'Google LLC', '555-987-6543', '123 Main St, Seattle, WA', 'GOLD', 'LOW', 'RSM001', 'ACTIVE', 'NO'),
+
+('RIM10002', '1990-07-22', 'Canada', 'B2', 'Standard Customer', NULL, 'CA', 'Canada', '2020-02-18', '10:15:00', '2020-02-18', '10:15:00', 'Amazon', 'Data Analyst', '555-234-5678', 'Analyst II', 'Emily', '2027-08-13', '2029-04-20', 'Canada', '2017-08-13', '2019-04-20', 'DL456123789', 'PP123456789', '2023-10-05 11:45:10', 'Jones', '2023-10-05 11:45:10', 7800.00, 'Williams', 'Emily Jones', 'Data Analysis and Reporting', 'IBM', '555-876-5432', '456 Oak Ave, Toronto, ON', 'SILVER', 'MEDIUM', 'RSM002', 'ACTIVE', 'NO'),
+
+('RIM10003', '1978-11-05', 'UK', 'A1', 'Premium Customer', NULL, 'GB', 'UK', '2020-03-25', '14:45:00', '2020-03-25', '14:45:00', 'Deutsche Bank', 'Financial Advisor', '555-345-6789', 'Senior Advisor', 'Robert', '2026-04-18', '2028-09-30', 'UK', '2016-04-18', '2018-09-30', 'DL123789456', 'PP789123456', '2023-09-18 09:20:15', 'Brown', '2023-09-18 09:20:15', 12500.00, 'Davis', 'Robert Brown', 'Financial Planning Lead', 'HSBC', '555-765-4321', '789 Park Lane, London', 'GOLD', 'LOW', 'RSM003', 'ACTIVE', 'NO'),
+
+('RIM10004', '1995-04-30', 'Australia', 'C3', 'Basic Customer', NULL, 'AU', 'Australia', '2020-04-10', '11:30:00', '2020-04-10', '11:30:00', 'Telstra', 'Customer Service', '555-456-7890', 'Representative', 'Sarah', '2025-11-25', '2027-05-12', 'Australia', '2015-11-25', '2017-05-12', 'DL789123456', 'PP456123789', '2023-08-22 16:10:05', 'Miller', '2023-08-22 16:10:05', 5200.00, 'Wilson', 'Sarah Miller', 'Customer Satisfaction Specialist', 'Optus', '555-654-3210', '101 Beach Rd, Sydney, NSW', 'BRONZE', 'HIGH', 'RSM004', 'ACTIVE', 'NO'),
+
+('RIM10005', '1982-09-15', 'Germany', 'A1', 'Premium Customer', NULL, 'DE', 'Germany', '2020-05-05', '13:20:00', '2020-05-05', '13:20:00', 'BMW', 'Engineering Manager', '555-567-8901', 'Department Head', 'Michael', '2029-02-10', '2031-07-18', 'Germany', '2019-02-10', '2021-07-18', 'DL456789123', 'PP123789456', '2023-07-14 10:35:55', 'Schmidt', '2023-07-14 10:35:55', 11800.00, 'Weber', 'Michael Schmidt', 'Engineering Leadership', 'Mercedes-Benz', '555-543-2109', '234 Hauptstrasse, Munich', 'GOLD', 'LOW', 'RSM005', 'ACTIVE', 'NO'),
+
+('RIM10006', '1993-12-08', 'France', 'B2', 'Standard Customer', NULL, 'FR', 'France', '2020-06-20', '09:45:00', '2020-06-20', '09:45:00', 'BNP Paribas', 'Marketing Specialist', '555-678-9012', 'Marketing Coordinator', 'Sophie', '2026-09-05', '2028-10-15', 'France', '2016-09-05', '2018-10-15', 'DL123456789', 'PP789456123', '2023-06-30 15:25:40', 'Dupont', '2023-06-30 15:25:40', 6900.00, 'Moreau', 'Sophie Dupont', 'Brand Marketing', 'Credit Agricole', '555-432-1098', '567 Rue de Paris, Paris', 'SILVER', 'MEDIUM', 'RSM006', 'ACTIVE', 'NO'),
+
+('RIM10007', '1975-05-28', 'Japan', 'A1', 'Premium Customer', '2023-01-10', 'JP', 'Japan', '2020-07-12', '15:10:00', '2020-07-12', '15:10:00', 'Sony', 'Product Manager', '555-789-0123', 'Senior Manager', 'Takashi', '2027-12-22', '2029-03-11', 'Japan', '2017-12-22', '2019-03-11', 'DL789456789', 'PP456789456', '2023-01-10 11:40:30', 'Nakamura', '2023-01-10 11:40:30', 10200.00, 'Tanaka', 'Takashi Nakamura', 'Product Development Leadership', 'Nintendo', '555-321-0987', '890 Sakura St, Tokyo', 'GOLD', 'LOW', 'RSM007', 'CLOSED', 'YES'),
+
+('RIM10008', '1998-02-17', 'Spain', 'C3', 'Basic Customer', NULL, 'ES', 'Spain', '2020-08-05', '10:50:00', '2020-08-05', '10:50:00', 'Santander', 'Customer Support', '555-890-1234', 'Support Agent', 'Elena', '2025-05-14', '2027-08-23', 'Spain', '2015-05-14', '2017-08-23', 'DL456123456', 'PP123456123', '2023-05-19 12:15:20', 'Garcia', '2023-05-19 12:15:20', 4800.00, 'Martinez', 'Elena Garcia', 'Client Service Representative', 'BBVA', '555-210-9876', '123 Calle Mayor, Madrid', 'BRONZE', 'HIGH', 'RSM008', 'ACTIVE', 'NO'),
+
+('RIM10009', '1980-10-03', 'Italy', 'B2', 'Standard Customer', NULL, 'IT', 'Italy', '2020-09-18', '14:05:00', '2020-09-18', '14:05:00', 'Fiat', 'Operations Manager', '555-901-2345', 'Regional Manager', 'Marco', '2028-11-08', '2030-01-19', 'Italy', '2018-11-08', '2020-01-19', 'DL123123789', 'PP789789456', '2023-04-12 08:50:45', 'Rossi', '2023-04-12 08:50:45', 8700.00, 'Ricci', 'Marco Rossi', 'Regional Operations Lead', 'Ferrari', '555-109-8765', '456 Via Roma, Milan', 'SILVER', 'MEDIUM', 'RSM009', 'ACTIVE', 'NO'),
+
+('RIM10010', '1991-08-19', 'Sweden', 'A1', 'Premium Customer', NULL, 'SE', 'Sweden', '2020-10-30', '12:25:00', '2020-10-30', '12:25:00', 'Volvo', 'IT Architect', '555-012-3456', 'Lead Architect', 'Anders', '2029-06-27', '2031-05-09', 'Sweden', '2019-06-27', '2021-05-09', 'DL456456123', 'PP123123789', '2023-03-24 17:30:15', 'Johansson', '2023-03-24 17:30:15', 10800.00, 'Lindberg', 'Anders Johansson', 'Enterprise Architecture', 'Ericsson', '555-098-7654', '789 Kungsgatan, Stockholm', 'GOLD', 'LOW', 'RSM010', 'ACTIVE', 'NO'),
+
+('RIM10011', '1987-01-25', 'Brazil', 'B2', 'Standard Customer', NULL, 'BR', 'Brazil', '2020-11-15', '09:15:00', '2020-11-15', '09:15:00', 'Petrobras', 'HR Specialist', '555-123-5678', 'HR Officer', 'Maria', '2026-10-12', '2028-12-05', 'Brazil', '2016-10-12', '2018-12-05', 'DL789789123', 'PP456456789', '2023-02-15 13:45:35', 'Silva', '2023-02-15 13:45:35', 6500.00, 'Santos', 'Maria Silva', 'Human Resources Management', 'Vale', '555-987-6543', '234 Av Paulista, Sao Paulo', 'SILVER', 'MEDIUM', 'RSM011', 'ACTIVE', 'NO'),
+
+('RIM10012', '1976-06-11', 'India', 'A1', 'Premium Customer', NULL, 'IN', 'India', '2020-12-08', '16:40:00', '2020-12-08', '16:40:00', 'Tata Consultancy', 'Senior Consultant', '555-234-6789', 'Principal Consultant', 'Raj', '2027-03-17', '2029-09-22', 'India', '2017-03-17', '2019-09-22', 'DL123123456', 'PP789789123', '2023-01-08 09:25:50', 'Patel', '2023-01-08 09:25:50', 9300.00, 'Sharma', 'Raj Patel', 'Technical Consulting Lead', 'Infosys', '555-876-5432', '567 MG Road, Mumbai', 'GOLD', 'LOW', 'RSM012', 'ACTIVE', 'NO'),
+
+('RIM10013', '1996-11-30', 'Singapore', 'C3', 'Basic Customer', '2023-02-20', 'SG', 'Singapore', '2021-01-20', '11:05:00', '2021-01-20', '11:05:00', 'DBS Bank', 'Bank Teller', '555-345-7890', 'Junior Teller', 'Li', '2025-08-05', '2027-11-14', 'Singapore', '2015-08-05', '2017-11-14', 'DL456456789', 'PP123123456', '2023-02-20 14:10:40', 'Tan', '2023-02-20 14:10:40', 4900.00, 'Wong', 'Li Tan', 'Customer Service Representative', 'OCBC Bank', '555-765-4321', '890 Orchard Rd, Singapore', 'BRONZE', 'HIGH', 'RSM013', 'CLOSED', 'YES'),
+
+('RIM10014', '1983-04-09', 'Netherlands', 'B2', 'Standard Customer', NULL, 'NL', 'Netherlands', '2021-02-11', '13:55:00', '2021-02-11', '13:55:00', 'Philips', 'Sales Manager', '555-456-8901', 'Regional Sales Lead', 'Jan', '2028-01-24', '2030-04-30', 'Netherlands', '2018-01-24', '2020-04-30', 'DL789123789', 'PP456789123', '2022-12-03 10:15:25', 'De Vries', '2022-12-03 10:15:25', 8900.00, 'Van den Berg', 'Jan De Vries', 'Sales Team Management', 'Shell', '555-654-3210', '123 Damrak, Amsterdam', 'SILVER', 'MEDIUM', 'RSM014', 'ACTIVE', 'NO'),
+
+('RIM10015', '1994-09-27', 'South Korea', 'A1', 'Premium Customer', NULL, 'KR', 'South Korea', '2021-03-05', '10:30:00', '2021-03-05', '10:30:00', 'Samsung', 'R&D Engineer', '555-567-9012', 'Senior Researcher', 'Min-ji', '2029-07-19', '2031-10-28', 'South Korea', '2019-07-19', '2021-10-28', 'DL123456123', 'PP789123789', '2022-11-17 15:40:10', 'Kim', '2022-11-17 15:40:10', 9100.00, 'Park', 'Min-ji Kim', 'Research And Development', 'LG', '555-543-2109', '456 Gangnam-daero, Seoul', 'GOLD', 'LOW', 'RSM015', 'ACTIVE', 'NO'),
+
+('RIM10016', '1979-12-14', 'Switzerland', 'B2', 'Standard Customer', NULL, 'CH', 'Switzerland', '2021-04-22', '15:35:00', '2021-04-22', '15:35:00', 'Nestle', 'Financial Controller', '555-678-0123', 'Senior Controller', 'Thomas', '2026-05-30', '2028-08-12', 'Switzerland', '2016-05-30', '2018-08-12', 'DL456789456', 'PP123456456', '2022-10-09 12:55:30', 'Mueller', '2022-10-09 12:55:30', 11200.00, 'Fischer', 'Thomas Mueller', 'Financial Control Management', 'UBS', '555-432-1098', '789 Bahnhofstrasse, Zurich', 'SILVER', 'MEDIUM', 'RSM016', 'ACTIVE', 'NO'),
+
+('RIM10017', '1988-07-02', 'Mexico', 'C3', 'Basic Customer', NULL, 'MX', 'Mexico', '2021-05-18', '09:10:00', '2021-05-18', '09:10:00', 'PEMEX', 'Administrative Assistant', '555-789-1234', 'Office Assistant', 'Carlos', '2025-12-11', '2027-03-25', 'Mexico', '2015-12-11', '2017-03-25', 'DL123789123', 'PP789456789', '2022-09-14 08:05:45', 'Rodriguez', '2022-09-14 08:05:45', 4500.00, 'Hernandez', 'Carlos Rodriguez', 'Administrative Support', 'Grupo Bimbo', '555-321-0987', '234 Av Reforma, Mexico City', 'BRONZE', 'HIGH', 'RSM017', 'ACTIVE', 'NO'),
+
+('RIM10018', '1972-03-18', 'Denmark', 'A1', 'Premium Customer', '2022-11-30', 'DK', 'Denmark', '2021-06-29', '14:20:00', '2021-06-29', '14:20:00', 'Maersk', 'Logistics Director', '555-890-2345', 'Executive Director', 'Lars', '2028-09-03', '2030-11-17', 'Denmark', '2018-09-03', '2020-11-17', 'DL456123123', 'PP123789789', '2022-11-30 17:20:15', 'Nielsen', '2022-11-30 17:20:15', 13500.00, 'Jensen', 'Lars Nielsen', 'Global Logistics Management', 'Vestas', '555-210-9876', '567 Nyhavn, Copenhagen', 'GOLD', 'LOW', 'RSM018', 'CLOSED', 'YES'),
+
+('RIM10019', '1992-05-21', 'Russia', 'B2', 'Standard Customer', NULL, 'RU', 'Russia', '2021-07-10', '12:50:00', '2021-07-10', '12:50:00', 'Gazprom', 'Project Coordinator', '555-901-3456', 'Junior Coordinator', 'Anastasia', '2027-04-08', '2029-06-14', 'Russia', '2017-04-08', '2019-06-14', 'DL789456456', 'PP456123123', '2022-08-22 11:35:50', 'Ivanova', '2022-08-22 11:35:50', 5800.00, 'Petrova', 'Anastasia Ivanova', 'Project Management Office', 'Rosneft', '555-109-8765', '890 Tverskaya St, Moscow', 'SILVER', 'MEDIUM', 'RSM019', 'ACTIVE', 'NO'),
+
+('RIM10020', '1981-08-06', 'United Arab Emirates', 'A1', 'Premium Customer', NULL, 'AE', 'United Arab Emirates', '2021-08-25', '16:15:00', '2021-08-25', '16:15:00', 'Emirates Airlines', 'Business Analyst', '555-012-4567', 'Senior Analyst', 'Ahmed', '2029-10-15', '2031-12-22', 'UAE', '2019-10-15', '2021-12-22', 'DL123456456', 'PP789123123', '2022-07-05 13:40:20', 'Al-Mansouri', '2022-07-05 13:40:20', 10500.00, 'Al-Hashimi', 'Ahmed Al-Mansouri', 'Business Process Analysis', 'Etihad Airways', '555-098-7654', '123 Sheikh Zayed Rd, Dubai', 'GOLD', 'LOW', 'RSM020', 'ACTIVE', 'NO');
